@@ -1,0 +1,13 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>{{ settings.title if settings is defined else title }} · Venkateswarlu</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='app.css') }}"></head>
+<body class="{{ settings.accent if settings is defined else 'blue' }}">
+<a class="skip" href="#main">Skip to content</a>
+<header class="topbar"><a class="brand" href="/">◈ {{ settings.title if settings is defined else title }}</a>
+<span class="eyebrow">A Venkateswarlu portfolio project</span>
+{% if g.user is defined and g.user %}<form method="post" action="{{ url_for('logout') }}"><input type="hidden" name="csrf" value="{{ session.csrf }}"><button class="quiet">Sign out · {{ g.user.username }}</button></form>{% endif %}</header>
+<main id="main">{% for category,message in get_flashed_messages(with_categories=true) %}<p class="notice {{ category }}" role="status">{{ message }}</p>{% endfor %}{% block content %}{% endblock %}</main>
+<footer>Built with Python, Flask &amp; SQLite <span>Portfolio demonstration · local use</span></footer>
+</body></html>

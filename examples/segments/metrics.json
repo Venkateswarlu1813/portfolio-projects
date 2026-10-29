@@ -1,0 +1,32 @@
+{
+  "chosen_k": 3,
+  "silhouette": 0.7233121633096754,
+  "candidate_scores": {
+    "2": 0.6302553035709786,
+    "3": 0.7233121633096754,
+    "4": 0.6799566225372106,
+    "5": 0.5928468145384297,
+    "6": 0.5645998248635618
+  },
+  "seed_stability_ari": 1.0,
+  "customers": 300,
+  "snapshot": "2026-01-01",
+  "segment_profiles": {
+    "0": {
+      "recency": 46.61,
+      "frequency": 9.12,
+      "monetary": 904.6
+    },
+    "1": {
+      "recency": 8.87,
+      "frequency": 18.93,
+      "monetary": 5205.81
+    },
+    "2": {
+      "recency": 134.33,
+      "frequency": 2.95,
+      "monetary": 104.75
+    }
+  },
+  "data_source": "synthetic demonstration data; not real-world validation"
+}

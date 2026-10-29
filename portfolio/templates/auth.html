@@ -1,0 +1,12 @@
+{% extends 'base.html' %}{% block content %}
+<div class="auth-layout"><section class="intro"><span class="pill">{{ project|replace('-', ' ')|title }}</span>
+<h1>{{ settings.tagline }}</h1><p class="lede">A focused workspace for the details that matter. Your records stay in your workspace, ready when you need them.</p>
+<div class="feature-list"><p><b>01</b> Create your personal workspace</p><p><b>02</b> Track records and their progress</p><p><b>03</b> Review history and export your data</p></div></section>
+<section class="panel auth"><span class="eyebrow">Let's get started</span><h2>{{ 'Create an account' if action == 'register' else 'Welcome back' }}</h2>
+<p>{{ 'Use a new username and a password of at least 12 characters.' if action == 'register' else 'Sign in to open your workspace.' }}</p>
+<form method="post"><input type="hidden" name="csrf" value="{{ session.csrf }}">
+<label>Username<input name="username" required minlength="3" maxlength="40" autocomplete="username" pattern="[a-zA-Z0-9_.-]{3,40}"></label>
+<label>Password<input type="password" name="password" required minlength="12" maxlength="200" autocomplete="{{ 'new-password' if action == 'register' else 'current-password' }}"></label>
+<button class="primary full">{{ 'Create workspace' if action == 'register' else 'Sign in' }}</button></form>
+<p>{{ 'Already have an account?' if action == 'register' else 'New here?' }} <a href="{{ url_for('login' if action == 'register' else 'register') }}">{{ 'Sign in' if action == 'register' else 'Create an account' }}</a></p></section></div>
+{% endblock %}

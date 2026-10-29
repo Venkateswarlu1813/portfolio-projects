@@ -1,0 +1,16 @@
+{
+  "mae": 5.388254117537083,
+  "rmse": 6.794766872564838,
+  "seasonal_baseline_mae": 7.139060897035837,
+  "selected_alpha": 10,
+  "cv_mae": {
+    "0.1": 5.775565816386019,
+    "1": 5.635350280260009,
+    "10": 5.428302858462249,
+    "100": 5.632170733474707
+  },
+  "train_rows": 476,
+  "test_rows": 56,
+  "evaluation": "Rolling one-day-ahead: previous observed days are available; not a 56-day forecast",
+  "data_source": "synthetic demonstration data; not real-world validation"
+}

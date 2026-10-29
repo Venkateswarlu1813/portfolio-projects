@@ -1,0 +1,5 @@
+Mira: We should explore a mobile dashboard later; no decision yet.
+Dev: I will deliver the API contract on Friday.
+ACTION: Dev | Deliver the API contract | Friday
+Mira: I will review it after delivery.
+ACTION: Mira | Review the API contract | after delivery

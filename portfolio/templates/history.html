@@ -1,0 +1,1 @@
+{% extends 'base.html' %}{% block content %}<a href="/">← Back to workspace</a><h1>{{ row.label }}</h1><p class="lede">{{ row.detail }}</p><section class="panel"><h2>Activity history</h2>{% for e in events %}<article class="timeline"><b>{{ e.action }}</b><p>{{ e.username }} · {{ e.created_at }} UTC</p></article>{% endfor %}</section>{% endblock %}

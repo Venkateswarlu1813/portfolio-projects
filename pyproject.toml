@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "venkateswarlu-portfolio-projects"
+version = "1.0.0"
+description = "Nine reproducible data science, generative AI, and full-stack portfolio projects"
+requires-python = ">=3.11"
+dependencies = ["Flask>=3.1,<4", "numpy>=2,<3", "pandas>=2.2,<4", "scikit-learn>=1.5,<2", "jsonschema>=4.23,<5"]
+
+[project.optional-dependencies]
+dev = ["pytest>=8,<10"]
+
+[tool.setuptools.packages.find]
+include = ["portfolio*"]
+
+[tool.setuptools.package-data]
+portfolio = ["templates/*.html", "static/*", "data/*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]
